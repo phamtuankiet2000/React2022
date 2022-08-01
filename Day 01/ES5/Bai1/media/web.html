@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // const birds = [
+        //     { "ID": "DV8", "Name": "Eurasian Collared-Dove", "Type": "Dove" },
+        //     { "ID": "HK12", "Name": "Bald Eagle", "Type": "Hawk" },
+        //     { "ID": "HK6", "Name": "Cooper's Hawk", "Type": "Hawk" },
+        //     { "ID": "SP11", "Name": "Bell's Sparrow", "Type": "Sparrow" },
+        //     { "ID": "DV2", "Name": "Mourning Dove", "Type": "Dove" }
+        // ];
+
+        // birds.forEach(bird => {
+        //     console.log(bird)
+        // })
+
+
+        // Bài 3:
+
+        // let kids = [
+        //     { id: 1, name: "a", age: 3 },
+        //     { id: 2, name: "b", age: 2 },
+        //     { id: 3, name: "c", age: 7 },
+        //     { id: 4, name: "d", age: 4 },
+        //     { id: 5, name: "e", age: 8 }
+        // ];
+
+        // const mau_giao = [];
+        // kids.foreach(kid => {
+        //     if (kid.age < 6) {
+        //         mau_giao.push({
+        //             id: kid.id,
+        //             name: kid.name,
+        //             age: kid.age
+        //         })
+        //     }
+        // })
+
+        // const tieu_hoc = [];
+        // kids.foreach(kid => {
+        //     if (kid.age > 5) {
+        //         tieu_hoc.push({
+        //             id: kid.id,
+        //             name: kid.name,
+        //             age: kid.age
+        //         })
+        //     }
+        // })
+
+        // Bài 2:
+
+        // var text = "lazy dog jumps over brown fox";
+        // var a = text.length()
+
+        // console.log(a);
+
+        class thongTin {
+            constructor(ten, moTa) {
+                this.ten = ten;
+                this.moTa = moTa;
+            }
+
+            tinhToan(a = 1) {
+                return a * 3;
+            }
+        };
+
+        class hinhHoc extends thongTin {
+            constructor(ten, chieuDai, moTa) {
+                super(ten, moTa);
+                this.chieuDai = chieuDai;
+            }
+
+            tinhtoan2(chieuDai) {
+                return this.tinhToan + chieuDai;
+            }
+        }
+
+        var hinhHoc1 = new hinhHoc("hcn", "3", "hcna");
+        console.log(hinhHoc1.ten);
+        console.log(hinhHoc1.moTa);
+        console.log(hinhHoc1.chieuDai);
+        console.log(hinhHoc1.tinhToan);
+        console.log(hinhHoc1.tinhtoan2);
+    </script>
+</body>
+
+</html>
