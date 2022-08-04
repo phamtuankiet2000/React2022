@@ -7,10 +7,12 @@ export default function Timer() {
         setTimer((timer) => timer - 1)
         setTimeout(() => { clearInterval(timerId); alert('Time’s up'); }, 10000);
     }
+
     let timerId = setInterval(() => useEffect(), 1000);
+
     return (
         <div className="container">
-
+            <p>{timer}</p>
         </div>
     )
 }
